@@ -1,0 +1,15 @@
+{
+  "name": "sentinelops-ai",
+  "version": "2.0.0",
+  "private": true,
+  "description": "SentinelOps AI: incident-response agent with Hindsight-style memory and Groq reasoning. Frontend + backend monorepo.",
+  "author": "Harsh Kumar",
+  "license": "MIT",
+  "scripts": {
+    "setup": "npm --prefix backend install",
+    "start": "npm --prefix backend start",
+    "dev": "npm --prefix backend run dev",
+    "test": "npm --prefix backend test"
+  },
+  "engines": { "node": ">=18" }
+}

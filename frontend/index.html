@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0ea5e9">
+<meta name="color-scheme" content="light">
+<meta name="description" content="SentinelOps AI: an incident-response agent with Hindsight-style memory and Groq-powered reasoning.">
+<title>SentinelOps AI — Incident Response Agent with Memory</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<div id="prog"></div>
+<canvas id="fx"></canvas>
+<div class="bubbles"><i></i><i></i><i></i><i></i><i></i></div>
+
+<div class="splash" id="splash"><div>
+  <div class="radar"><b></b><b></b><b></b>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.3 8-8 9-4.7-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+  </div>
+  <p>Waking SentinelOps AI…<br><small>Loading memory bank</small></p>
+</div></div>
+
+<div class="app" id="app">
+  <aside class="side">
+    <div class="brand">
+      <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.3 8-8 9-4.7-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <div class="brand-t"><b>SentinelOps AI</b><span>Incident response with memory</span></div>
+      <button class="collapse" data-act="navCollapse" aria-label="Collapse sidebar" title="Collapse / expand"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+    </div>
+    <nav class="nav" id="nav" aria-label="Main"><div class="nav-hover" id="navHover"></div><div class="nav-ind" id="navInd"></div></nav>
+    <div class="orb-card"><div class="orb" id="orb"></div><div class="orb-t"><b id="orbT">Memory online</b><span id="orbS">0 memories</span></div></div>
+    <div class="credit"><span>Created by </span><b>Harsh Kumar</b></div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <h1 id="title">War Room</h1>
+      <div class="live"><i></i><span id="clock">--:--:--</span></div>
+      <div class="ai chk" id="aiBadge" data-act="aiInfo" role="button" tabindex="0" title="AI status"><i></i><b id="aiTxt">AI: checking…</b></div>
+      <div class="sw on" id="memSw" data-act="memToggle" role="switch" aria-checked="true" tabindex="0"><i></i><span>Memory</span></div>
+      <button class="ib" data-act="palette" title="Command palette (Ctrl/⌘ K)" aria-label="Open command palette"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span>Ctrl K</span></button>
+    </header>
+    <div id="view"></div>
+    <footer class="foot">Built for the “AI Agents That Learn Using Hindsight” hackathon · <b>Created by Harsh Kumar</b></footer>
+  </div>
+</div>
+<div class="toasts" id="toasts"></div>
+<div id="modalRoot"></div>
+
+<script src="js/core.js"></script>
+<script src="js/memory.js"></script>
+<script src="js/incidents.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/actions.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

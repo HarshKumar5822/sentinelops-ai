@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files and secrets (NEVER COMMIT REAL KEYS)
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Runtime data & logs
+backend/data/*.json
+!backend/data/.gitkeep
+backend/data/*.tmp
+*.log
+*.tmp
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+
